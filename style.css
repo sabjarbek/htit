@@ -13,15 +13,14 @@ padding:0;
 .top-menu  a span{
     padding: 0 10px;
 }
-p.link_facilaty{
-    padding: 10px 0;
-    margin: 0;
+.link_facilaty{
+      margin: 0;
 }
 a.top-menu-link{
     width:100%;
     display: block;
 }
-p.link_facilaty a{
+span.link_facilaty a{
 color:#fff;
 text-decoration: none;
 font-size: 13px;
