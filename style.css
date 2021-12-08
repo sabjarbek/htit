@@ -20,14 +20,6 @@ a.top-menu-link{
     width:100%;
     display: block;
 }
-span.link_facilaty a{
-color:#fff;
-text-decoration: none;
-font-size: 13px;
-}
-p.link_facilaty a:hover{
-    text-decoration: underline;
-}
 a.header-logo{
 color: #fff;
 text-align: left;
@@ -134,6 +126,34 @@ ul.creambs li a{
     font-size: 14px;
     color:#80b476;
 }
+ul.creambs-top{
+    margin: 0;
+    padding:0;
+}
+ul.creambs-top li{
+    list-style: none;
+    display: inline-table;
+}
+ul.creambs-top li::after{
+    content: " /";
+    color:rgb(214, 214, 214);
+}
+ul.creambs-top li:last-child::after{
+    content: "";
+}
+ul.creambs-top li span.link_facilaty a{
+    color:rgb(214, 214, 214);
+    text-decoration: none;
+    font-size: 14px;
+    }
+ul.creambs-top li:first-child span.link_facilaty a{
+        color:#fff;
+        text-decoration: none;
+        font-size: 14px;
+        }    
+ul.creambs-top li:hover span.link_facilaty a{
+    text-decoration: underline;
+    }
 ul.about-news{
     padding: 0;
     margin: 10px 0;
