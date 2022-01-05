@@ -156,6 +156,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
 
+
+
 let form = document.forms.calculator;
 
 form.diametr.oninput = calculate;
@@ -164,8 +166,9 @@ form.speed.oninput = calculate;
 form.lg.oninput = calculate;
 form.resist.oninput = calculate;
 function calculate() {
-  let diametr = form.diametr.value;
+  let diametr = form.diametr.value;  
   if (!diametr) return;
+ 
   let high = form.high.value;
   if (!high) return;
   let speed = form.speed.value;
