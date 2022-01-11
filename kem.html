@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <title>Calculator</title>
+  </head>
+  <body style="background-color: #feffde;">
+    <header  style="background-color: #54744f;">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">          
+            <a class="navbar-brand header-logo" href="#"><img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="50px" ><span>EFM fakulteti</span></a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+              <ul class="navbar-nav head-menu">
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">Asosiy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Telegram</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Instagram</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" >Aloqalar</a>
+                </li>
+              </ul>
+            </div>
+
+        </nav>
+      </div>
+  </header>
+    <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+        <form class="row g-3 needs-validation" name="calculator">
+            <div class="col-md-12">
+              <label for="diametr" class="form-label">S<sub>K</sub> - Долота танасининг ишчи юзаси (мм<sup>2</sup>)</label>
+              <input id="diametr" type="text" class="form-control" name="diametr" placeholder="0.1" >
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom02" class="form-label">H<sub>max</sub> - Кесиш чизиғида тишларнинг максимал баландлигининг ўртача катталиги (мм)</label>
+              <input type="text" class="form-control" name="high" placeholder="1" >
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom03" class="form-label">R<sub>z</sub> - Забой юзасининг ғадир-будирлиги кўрсаткичи (мкм) (ГОСТ 2789-72)</label>
+              <input type="text" class="form-control" name="speed" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom05" class="form-label"><i>n<sub>S</sub></i> - Долотанинг ишчи танасидаги олмос тишлар сони</label>
+              <input type="text" class="form-control" name="lg" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom06" class="form-label">V<sub>as</sub> -Mатрицадан чиқиб турган тишларнинг ҳажми (мм<sup>3</sup>)</label>
+              <input type="text" class="form-control" name="resist" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom07" class="form-label">Z - секторлар сони </label>
+              <input type="text" class="form-control" name="sectors" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom08" class="form-label">S<sub>з</sub> - Забой юзаси (мм<sup>2</sup>) </label>
+              <input type="text" class="form-control" name="zaboy" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom09" class="form-label">h<sub>айл</sub>  – айланишдаги чуқурлашув (мм) </label>
+              <input type="text" class="form-control" name="aylanish" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom10" class="form-label">K<sub>p</sub> - Жинснинг майдаланиш коэффициенти </label>
+              <input type="text" class="form-control" name="maydalanish" placeholder="1">
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom11" class="form-label">K<sub>m</sub> - Жинс парчаловчи асбоб танасида тишларнинг чиқиб туриши натижасида шлам эгаллаган ҳажмнинг камайиш коэффициенти </label>
+              <input type="text" class="form-control" name="jins" placeholder="1">
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary " type="button" id="elem">Рассчитать</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 d-none" id="hiddenjs">
+          <table class="table">
+            <tr>
+              <td>Коэффициент сопротивления сухого аппарата:</td>
+              <td id="result"></td>
+            </tr>
+          </table>
+          </div>
+          <div class="col-md-6 d-none" id="hiddenjserror">
+            <p>Введите значение корректные</p>
+          </div>
+        </div>
+        </div> 
+    </section>
+    <footer class="dasdas" style="background-color: #54744f;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-list">
+              <h4>Fakultet haqida</h4>
+              <ul>
+                <li><a href="#">Fakultet tarixi</a></li>
+                <li><a href="#">Fakultet tarkibi</a></li>
+                <li><a href="#">Fakultet kengashi</a></li>
+                <li><a href="#">Xodimlar</a></li>
+                <li><a href="#">Kafedralar</a></li>
+                <li><a href="#">Fakultet rahbariyati</a></li>
+                <li><a href="#">Fakultet bitiruvchilari</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-list">
+              <h4>Abituriyent uchun</h4>
+              <ul>
+                <li><a href="#">Fakultet ma'lumotlari</a></li>
+                <li><a href="#">Fakultet bukletlar</a></li>
+                <li><a href="#">Tanlov komissiyasi</a></li>
+                <li><a href="#">Mutaxassisliklar</a></li>
+                <li><a href="#">Ochiq eshiklar kuni</a></li>
+                <li><a href="#">Abituriyentlar uchun yangiliklar</a></li>
+                <li><a href="#">Pullik ta'lim xizmatlari</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-list">
+              <h4>Talabalarga</h4>
+              <ul>
+                <li><a href="#">Darslar jadvali</a></li>
+                <li><a href="#">Ta'lim portali NDKI</a></li>
+                <li><a href="#">Moodle</a></li>
+                <li><a href="#">Talabalar maslahat kengashi</a></li>
+                <li><a href="#">Olimpiada</a></li>
+                <li><a href="#">Musobaqalar</a></li>
+                <li><a href="#">Talabalar to'garaklari</a></li>
+              </ul>
+            </div>
+          </div>
+        <div class="col-md-12">
+          <hr/>
+        </div>
+        <div class="col-md-6">
+          <p class="copyright">Energo-mexanika fakulteti barcha huquqlar himoyalangan - 2021</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="copyright-list">
+            <li><a href="#">Yordam</a></li>
+            <li><a href="#">Maxfiylik</a></li>
+            <li><a href="#">Sayt xaritasi</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+
+
+
+let form = document.forms.calculator;
+
+form.diametr.oninput = calculate;
+form.high.oninput = calculate;
+form.speed.oninput = calculate;
+form.lg.oninput = calculate;
+form.resist.oninput = calculate;
+form.sectors.oninput = calculate;
+form.zaboy.oninput = calculate;
+form.aylanish.oninput = calculate;
+form.maydalanish.oninput = calculate;
+form.jins.oninput = calculate;
+
+
+function calculate() {
+  let diametr = form.diametr.value;  
+  if (!diametr) return; 
+  let high = form.high.value;
+  if (!high) return;
+  let speed = form.speed.value;
+  if (!speed) return;
+  let lg = form.lg.value;
+  if (!lg) return;
+  let resist = form.resist.value;
+  if (!resist) return;
+  let sectors = form.sectors.value;
+  if (!sectors) return
+  let zaboy = form.zaboy.value;
+  if (!zaboy) return; 
+  let aylanish = form.aylanish.value;
+  if (!aylanish) return; 
+  let maydalanish = form.maydalanish.value;
+  if (!maydalanish) return; 
+  let jins = form.jins.value;
+  if (!jins) return; 
+
+
+  let result = zaboy*aylanish*maydalanish*jins;
+  let result1 = diametr*sectors;
+  let result2 = lg*resist;
+  let result3 = high-speed-result2;
+  let result4 = result1*result3;
+  let result5 = result/result4;
+
+  document.getElementById('result').innerHTML = result5;
+  somesome=result5;
+}
+
+calculate();
+
+elem.onclick = function(event) {
+    // вывести тип события, элемент и координаты клика
+    if(isNaN(somesome)){
+      hiddenjserror.style.cssText=`display: block !important;`;
+    }else{
+      hiddenjs.style.cssText=`display: block !important;`;
+    };
+    
+  };
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </footer>
+  </body>
+</html>
